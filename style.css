@@ -1229,3 +1229,5 @@ a, button { transition: color var(--transition), background var(--transition), b
   text-align: center;
   display: block;
 }
+
+@media (max-width: 600px) { .give-grid { grid-template-columns: 1fr !important; } }
