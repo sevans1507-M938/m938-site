@@ -665,13 +665,16 @@ a, button { transition: color var(--transition), background var(--transition), b
   text-align: center;
 }
 .partners-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-6);
   margin-top: var(--space-10);
 }
-@media (max-width: 1000px) { .partners-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 1000px) { .partner-item { width: calc((100% - 2 * var(--space-6)) / 3); } }
 .partner-item {
+  width: calc((100% - 3 * var(--space-6)) / 4);
+  box-sizing: border-box;
   text-align: center;
   padding: var(--space-6) var(--space-4);
   background: var(--color-surface);
@@ -724,8 +727,8 @@ a, button { transition: color var(--transition), background var(--transition), b
   line-height: 1.3;
 }
 .partner-name:hover { text-decoration: underline; text-underline-offset: 3px; }
-@media (max-width: 800px) { .partners-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .partners-grid { grid-template-columns: 1fr; } }
+@media (max-width: 800px) { .partner-item { width: calc((100% - var(--space-6)) / 2); } }
+@media (max-width: 480px) { .partner-item { width: 100%; } }
 
 /* === CTA BANNER === */
 .cta-banner {
